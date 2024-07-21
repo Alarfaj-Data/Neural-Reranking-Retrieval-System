@@ -7,16 +7,18 @@ Information retrieval (IR) systems have benefited from the recent advancements i
 In this project, we aim to discover the effect of re-ranking a candidate list of documents using a neural network model. We will also investigate models with different document representations. We will pair these representations with relevance feedback function to improve the results. In other words, we will develop a pipeline of technologies that includes a classical retrieval model, a neural re-ranker, and a pseudo relevance feedback mechanism.
 This pipeline has proven to be effective as it outperformed the use of a single classical ranker, the addition of relevance feedback got us significantly better results.
 
+
+
 # Project Details: 
-<ul>
-<li> <b>Dataset:</b> <i>MS MARCO document dataset </i> </li>
-<li><b>Classical retrieval Model:</b> <i>BM25</i>  </li>
-<li><b>1st Neural Model:</b> <i>BERT</i> </li>
-<li><b>2nd Neural Model:</b> <i>Longformer</i> </li>
-<li><b>Pseudo Relevance Feedback Model (For Query Expansion):</b> <i>Bo1 from DFR</i> </li>
-<li><b>Main Cloud Service:</b> <i>Google Colab</i> </li>
-<li><b>Training Cloud Service:</b> <i>Lambda Labs</i> </li>
-</ul>
+
++ **Dataset:** MS MARCO document dataset[^1]
++ **Classical retrieval Model:** BM25[^2]
++ **1st Neural Model:** BERT[^3]
++ **2nd Neural Model:** Longformer[^4]
++ **Pseudo Relevance Feedback Model (For Query Expansion):** Bo1 from DFR[^5]
++ **Main Cloud Service:** Google Colab
++ **Training Cloud Service:** Lambda Labs[^6]
+
 
 # Project structure
 This project was broken down to 6 files for simplicity.
@@ -61,3 +63,20 @@ This notebook is similar to <b> BERT Finetuning Notebook </b>, but with some mod
 This notebook is similar to <b> BERT Reranker Notebook </b>, the main difference is using Longformer instead of BERT in the pipeline.
 
 
+# Notes
+
+<ul>
+<li> I was not planning to publish the codes when I wrote it, forgive me if it looks messy.</li>
+<li> Please refer to the dissertation document which includes more details.</li>
+<li> Contact if you have any questions or corrections  <a href="https://linkedin.com/in/abdullahalarfaj" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="abdullahalarfaj" height="15" width="15" /></a></li>
+</ul>
+
+
+# References
+
+[^1]:N. Craswell, B. Mitra, E. Yilmaz, D. Campos, and E. M. Voorhees, ‘Overview of the TREC 2019 deep learning track’, Mar. 18, 2020, arXiv: arXiv:2003.07820. Accessed: Aug. 14, 2022. [Online]. Available: http://arxiv.org/abs/2003.07820
+[^2]:S. Robertson, S. Walker, S. Jones, M. M. Hancock-Beaulieu, and M. Gatford, ‘Okapi at TREC-3’, in Overview of the Third Text REtrieval Conference (TREC-3), Gaithersburg, MD: NIST, Jan. 1995, pp. 109–126. [Online]. Available: https://www.microsoft.com/en-us/research/publication/okapi-at-trec-3/
+[^3]: J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, “BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.” arXiv, May 24, 2019. Accessed: Aug. 14, 2022. [Online]. Available: http://arxiv.org/abs/1810.04805
+[^4]: I. Beltagy, M. E. Peters, and A. Cohan, “Longformer: The Long-Document Transformer.” arXiv, Dec. 02, 2020. Accessed: Aug. 14, 2022. [Online]. Available: http://arxiv.org/abs/2004.05150
+[^5]: G. Amati, “Probability models for information retrieval based on divergence from randomness,” Thesis (PhD), University of Glasgow, 2003. [Online]. Available: https://theses.gla.ac.uk/1570/
+[^6]: [Lambdalabs](https://lambdalabs.com/)
