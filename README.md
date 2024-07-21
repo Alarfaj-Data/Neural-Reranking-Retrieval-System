@@ -25,6 +25,7 @@ This project was broken down to 6 files for simplicity.
 
 In this notebook, I created another document collection composed of the first 500 tokens of each document, I called this <b>passage collection</b>. The reason behind this is BERT number of tokens limitation, because of this limitation BERT cannot accept more than 512 tokens. So, if we expand the query with tokens that appear in later passages in the document BERT may not benefit from them and it may hurt the results. (This idea was completely expermintal)
 
+
 **2- Indexing Component Notebook**
 
 In this notebook, I created the inverted indecies to be used by the classical retrieval model (BM25), and the pseudo relevance feedback model (Bo1). Typically, you need to create one inverted index for the document collection, but I decided to create 2 inverted indecies in this project. One index is created using the docuemnt collection (to be used by BM25), the other index is created using the passage collection in each document (to be used by Bo1).
@@ -40,12 +41,15 @@ In this notebook, I prepared the dataset and finetuned BERT, this includes:
 
 3- Setting the training hyperparameters and starting training, in the end I saved the finetuned model. 
 
+
 **4- BERT Reranker Notebook**
 
 In this notebook, I loaded the finetuned model and costructed the retrieval pipeline, this includes:
 
 1- Initializing BM25, BERT, and BERT tokenizer.
+
 2- The pipeline goes like this. BM25 >> BERT >> Relevance feedback >> BERT
+
 
 **5- Longformer Finetuning Notebook**
 
@@ -54,4 +58,6 @@ This notebook is similar to <b> BERT Finetuning Notebook </b>, but with some mod
 
 **6- Longformer Reranker Notebook**
 
-This notebook is similar to <b> BERT Reranker Notebook </b>, the main difference is using Longformer instead of BERT.
+This notebook is similar to <b> BERT Reranker Notebook </b>, the main difference is using Longformer instead of BERT in the pipeline.
+
+
