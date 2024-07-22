@@ -1,5 +1,5 @@
 # Neural Reranking Retrieval System
-Master degree project (2022)
+Master's degree project (2022)
 
 # Abstract
 
@@ -25,28 +25,28 @@ This project was broken down to 6 files for simplicity.
 
 **1- Passage Collection Notebook**
 
-In this notebook, I created another document collection composed of the first 500 tokens of each document, I called this <b>passage collection</b>. The reason behind this is BERT number of tokens limitation, because of this limitation BERT cannot accept more than 512 tokens. So, if we expand the query with tokens that appear in later passages in the document BERT may not benefit from them and it may hurt the results. (This idea was completely expermintal)
+In this notebook, I created another document collection composed of the first 500 tokens of each document, I called this <b>passage collection</b>. The reason behind this is BERT number of tokens limitation, because of this limitation BERT cannot accept more than 512 tokens. So, if we expand the query with tokens that appear in later passages in the document BERT may not benefit from them and it may hurt the results. (This idea was completely experimental)
 
 
 **2- Indexing Component Notebook**
 
-In this notebook, I created the inverted indecies to be used by the classical retrieval model (BM25), and the pseudo relevance feedback model (Bo1). Typically, you need to create one inverted index for the document collection, but I decided to create 2 inverted indecies in this project. One index is created using the docuemnt collection (to be used by BM25), the other index is created using the passage collection in each document (to be used by Bo1).
+In this notebook, I created the inverted indices to be used by the classical retrieval model (BM25), and the pseudo relevance feedback model (Bo1). Typically, you need to create one inverted index for the document collection, but I decided to create 2 inverted indices in this project. One index is created using the document collection (to be used by BM25), the other index is created using the passage collection in each document (to be used by Bo1).
 
 
 **3- BERT Finetuning Notebook**
 
 In this notebook, I prepared the dataset and finetuned BERT, this includes:
 
-1- Preparing the dataset for finetuning BERT. This dataset provides a single document that is deemed relevant for each query (this is my positive label), but for a classification task, we also need documents that are not relevant to the query (this will be the negative label). To address this, I sampled a random document from the collection for each query. This way we have the provided relevant document and the random sampled document (positive and negative). By the end of the preprocessing, I created a dataframe that is suitable for my needs, it had query id, document id, query text, docuemnt text, and the label (whether this document is relevant to the query or not). The final step was to save the dataframe as CSV to be used later in the project.
+1- Preparing the dataset for finetuning BERT. This dataset provides a single document that is deemed relevant for each query (this is my positive label), but for a classification task, we also need documents that are not relevant to the query (this will be the negative label). To address this, I sampled a random document from the collection for each query. This way we have the provided relevant document and the random sampled document (positive and negative). By the end of the preprocessing, I created a dataframe that is suitable for my needs, it had query id, document id, query text, document text, and the label (whether this document is relevant to the query or not). The final step was to save the dataframe as CSV to be used later in the project.
 
-2- Feeding the preprocessed dataset to BERT tokenizer and created <b>TensorDataset</b> objects, these objects are to be fed BERT as input. I downloaded the these objects as pt files. I did this because I didn't want go through the tokenization process everytime I expermint with new ideas.
+2- Feeding the preprocessed dataset to BERT tokenizer and created <b>TensorDataset</b> objects, these objects are to be fed BERT as input. I downloaded the these objects as pt files. I did this because I didn't want go through the tokenization process every time I experiment with new ideas.
 
 3- Setting the training hyperparameters and starting training, in the end I saved the finetuned model. 
 
 
 **4- BERT Reranker Notebook**
 
-In this notebook, I loaded the finetuned model and costructed the retrieval pipeline, this includes:
+In this notebook, I loaded the finetuned model and constructed the retrieval pipeline, this includes:
 
 1- Initializing BM25, BERT, and BERT tokenizer.
 
@@ -66,7 +66,7 @@ This notebook is similar to <b> BERT Reranker Notebook </b>, the main difference
 # Notes
 
 <ul>
-<li> I was not planning to publish the codes when I wrote it, forgive me if it looks messy.</li>
+<li> I was not planning to publish the codes when I wrote them, forgive me if they look messy.</li>
 <li> Please refer to the dissertation document which includes more details.</li>
 <li> Contact if you have any questions or corrections  <a href="https://linkedin.com/in/abdullahalarfaj" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="abdullahalarfaj" height="15" width="15" /></a></li>
 </ul>
