@@ -17,7 +17,7 @@ This pipeline has proven to be effective as it outperformed the use of a single 
 + **2nd Neural Model:** Longformer[^4]
 + **Pseudo Relevance Feedback Model (For Query Expansion):** Bo1 from DFR[^5]
 + **Main Cloud Service:** Google Colab
-+ **Training Cloud Service:** Lambda Labs[^6]
++ **Model training Cloud Service:** Lambda Labs[^6] (Google Colab was not suitable for finetuning models to large datasets)
 
 
 # Project structure
