@@ -33,6 +33,25 @@ This pipeline has proven to be effective as it outperformed the use of a single 
 
 Note: I answered these questions in the results section below.
 
+# Data Assets
+**• [Finetuned BERT](https://archive.org/download/finetuned-bert/Finetuned%20BERT.zip)** Model weights that can be loaded using Huggingface
+
+**• [Finetuned Longformer](https://archive.org/download/finetuned-longformer/Finetuned%20Longformer.zip)** Model weights that can be loaded using Huggingface
+
+**• [Preprocessed Training dataset](https://archive.org/download/train_dataset/train_dataset.rar)** In CSV Format
+
+**• [Preprocessed Validation dataset](https://archive.org/download/val_dataset/val_dataset.rar)** In CSV Format
+
+**• [Tokenized Training dataset (BERT)](https://archive.org/download/bert-train-dataset-tensor/BERT_train_dataset_tensor.rar)** In TensorDataset Format (.pt)
+
+**• [Tokenized Validation dataset (BERT)](https://archive.org/download/bert-val-dataset-tensor/BERT_val_dataset_tensor.rar)** In TensorDataset Format (.pt)
+
+**• [Tokenized Training dataset (Longformer)](https://archive.org/download/longformer-train-dataset-tensor/Longformer_train_dataset_tensor.rar)** In TensorDataset Format (.pt)
+
+**• [Tokenized Validation dataset (Longformer)](https://archive.org/download/longformer-val-dataset-tensor/Longformer_val_dataset_tensor.rar)** In TensorDataset Format (.pt)
+
+
+
 # Project structure
 This project was broken down to 6 files for simplicity.
 
