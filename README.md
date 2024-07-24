@@ -1,7 +1,7 @@
 # Neural Reranking Retrieval System
-Master's degree project
+**Master's degree project**
 
-University of Glasgow (2022)
+**University of Glasgow (2022)**
 
 # Abstract
 
